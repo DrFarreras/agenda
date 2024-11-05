@@ -1,5 +1,5 @@
    <!DOCTYPE html>
-    <html lang="es">
+    <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="author" content="Muhamad Nauval Azhar">
@@ -9,6 +9,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     </head>
       
+    
     <body style="background-color: rgb(159, 227, 159);">
         <section class="h-100">
             <div class="container h-100">
