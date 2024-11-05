@@ -46,6 +46,8 @@
     margin-bottom: 15px;
     border-radius: 8px;
     transition: box-shadow 0.3s ease;
+    width: 100%;
+    height: 89%;
 }
 
 .event-card:hover {
@@ -53,11 +55,11 @@
 }
 
 .event-image {
-    width: 100px;
-    height: 100px;
+    width: 60%;
+    height: 60%;
     object-fit: cover;
-    margin-right: 15px;
-    border-radius: 8px;
+    margin-right: 1.5%;
+    border-radius: 8%;
 }
 
 .navbar-bottom {
@@ -67,5 +69,6 @@
     right: 0;
     background-color: #ffffff;
     border-top: 1px solid #e0e0e0;
-    padding: 10px 0;
+    padding: 1% 0;
 }
+
