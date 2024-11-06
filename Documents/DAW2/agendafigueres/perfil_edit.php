@@ -7,7 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <title>Document</title>
-  <link href="edit.css">
+  <link href="css/perfil-edit.css">
 </head>
 
 <body>
@@ -86,8 +86,8 @@
                 <button type="button" data-mdb-button-init data-mdb-ripple-init
                   class="btn btn-outline-success ms-1 text-succes hover:text-white" type="submit" value="Submit" form="form_edit">Save</button>
                   <button type="button" data-mdb-button-init data-mdb-ripple-init
-                  class="btn btn-outline-danger ms-1 text-danger hover:text-white ">
-                  <a class="text-danger hover:text-white" href="perfil.php">
+                  class="cancel-button" class="btn btn-outline-danger ms-1 ">
+                  <a class="text-danger" href="perfil.php">
                     Cancel
                 </a>
             </button>
