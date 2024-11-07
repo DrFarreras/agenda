@@ -75,7 +75,7 @@
                             </div>
                             <div class="card-footer py-3 border-0">
                                 <div class="text-center">
-                                    Ja tens un compte? <a href="index.html" class="text-dark">Inicia Sessió</a>
+                                    Ja tens un compte? <a href="/src/vistas/index.html" class="text-dark">Inicia Sessió</a>
                                 </div>
                             </div>
                         </div>

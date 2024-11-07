@@ -7,7 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <title>Document</title>
-  <link href="css/perfil-edit.css">
+  <link href="disseño-perfil.css">
 </head>
 
 <body>
@@ -18,41 +18,27 @@
   <nav class="navbar navbar-expand-lg bg-success">
     <div class="container-fluid">
       <a class="navbar-brand" href="main.html">
-        <img src="img/2.png" alt="Bootstrap" width="60" height="60">
+        <img src="/src/img/2.png" alt="Logo" width="60" height="60">
       </a>
-      <a class="navbar-brand" href="#">Navbar</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="nav_perfil">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="main.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
+          <a class="nav-link" href="/src/vistas/main.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/src/vistas/maps.html">Mapa</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="/src/vistas/perfil.php">Perfil</a>
         </ul>
+        </div>
         <form class="d-flex " role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn2" type="submit" class="puta">Search</button>
+          <button class="btn2" type="submit">Search</button>
         </form>
       </div>
     </div>
@@ -64,7 +50,7 @@
         <div class="col">
           <nav aria-label="breadcrumb" class="bg-body-tertiary rounded-3 p-3 mb-4">
             <ol class="breadcrumb mb-0">
-              <li class="breadcrumb-item"><a href="main.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="/src/vistas/main.html">Home</a></li>
               <li class="breadcrumb-item"><a href="#">User</a></li>
               <li class="breadcrumb-item active" aria-current="page">User Profile</li>
             </ol>
@@ -82,28 +68,17 @@
               <p class="text-muted mb-1">Full Stack Developer</p>
               <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
               <div class="d-flex justify-content-center mb-2">
-                
+                <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Follow</button>
                 <button type="button" data-mdb-button-init data-mdb-ripple-init
-                  class="btn btn-outline-success ms-1 text-succes hover:text-white" type="submit" value="Submit" form="form_edit">Save</button>
+                  class="btn btn-outline-success ms-1 text-succes hover:text-white">Message</button>
+                  <button type="button" data-mdb-button-init data-mdb-ripple-init 
+                  class="btn btn-outline-success ms-1 text-succes hover:text-white"><a class="text-succes hover:text-white" href="perfil_edit.php">Edit</a></button>
                   <button type="button" data-mdb-button-init data-mdb-ripple-init
-                  class="cancel-button" class="btn btn-outline-danger ms-1 ">
-                  <a class="text-danger" href="perfil.php">
-                    Cancel
-                </a>
-            </button>
-                  
+                  class="btn btn-outline-danger ms-1 text-danger hover:text-white"><a class="text-danger hover:text-white" href="login.php">Close Session</a></button>
               </div>
             </div>
           </div>
-
-    
-            
-            
-            
-            
-
-
-          <div class="card mb-3 mb-lg-0">
+          <div class="card mb-4 mb-lg-0">
             <div class="card-body p-0">
               <ul class="list-group list-group-flush rounded-3">
                 <li class="list-group-item d-flex justify-content-between align-items-center p-3">
@@ -130,19 +105,16 @@
             </div>
           </div>
         </div>
-        
-        
-            
         <div class="col-lg-8">
           <div class="card mb-4">
             <div class="card-body">
               <div class="row">
                 <div class="col-sm-3">
-                 <form method="POST" id="form_edit" action="/perfil.php"> 
-                <label for="fname">Full Name</label>
+                  
+                  <p >Full Name</p>
                 </div>
                 <div class="col-sm-9">
-                <input  class="text-muted mb-0" type="text" id="fname" name="fname">
+                  <p class="text-muted mb-0">Johnatan Smith</p>
                 </div>
               </div>
               <hr>
@@ -158,26 +130,23 @@
               <hr>
               <div class="row">
                 <div class="col-sm-3">
-                <label for="telefon">Mobile</label>
+                  <p class="mb-0">Mobile</p>
                 </div>
                 <div class="col-sm-9">
-                <input class="text-muted mb-0" type="tel" id="tel" name="tel">
-                  
+                  <p class="text-muted mb-0">(098) 765-4321</p>
                 </div>
               </div>
               <hr>
               <div class="row">
                 <div class="col-sm-3">
-                <label for="Adress">Adress</label>
+                  <p class="mb-0">Address</p>
                 </div>
                 <div class="col-sm-9">
-                <input class="text-muted mb-0" type="email" id="email" name="email">
-                </form>
+                  <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
                 </div>
               </div>
             </div>
           </div>
-            
 
 
           <div class="col-md-6">
@@ -190,10 +159,6 @@
             </div>
           </div>
         </div>
-
-
-
-
       </div>
     </div>
     </div>
