@@ -15,7 +15,7 @@
 			<div class="row justify-content-sm-center h-100">
 				<div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
 					<div class="text-center my-5">
-						<img src="img/2.png" alt="logo" width="100">
+						<img src="/src/img/2.png" alt="logo" width="100">
 					</div>
 
 					<div class="card shadow-lg">
@@ -56,7 +56,7 @@
 						</div>
 						<div class="card-footer py-3 border-0">
 							<div class="text-center">
-								Don't have an account? <a href="register.html" class="text-dark">Create One</a>
+								Don't have an account? <a href="register.php" class="text-dark">Create One</a>
 							</div>
 						</div>
 					</div>

@@ -1,7 +1,7 @@
 /* Estilos generales */
 .navbar-top {
     width: 100%;
-    position: fixed;
+    
     top: 0;
     z-index: 1000;
 }
@@ -70,5 +70,26 @@
     background-color: #ffffff;
     border-top: 1px solid #e0e0e0;
     padding: 1% 0;
+}
+
+.boton-danger{
+    color: #dc3545 !important;
+}
+.boton-danger:hover {
+    color:white !important;
+     /* Fondo rojo para mantener el estilo de danger */
+}
+
+.boton-succes{
+    color:#198754 !important;
+}
+.boton-succes:hover {
+  color:white !important;
+}
+.nav-abaix{
+    margin-bottom: 20px;
+}
+body{
+    background-color: #f0f0f0;
 }
 

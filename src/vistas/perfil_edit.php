@@ -68,8 +68,7 @@
                 <button type="button" data-mdb-button-init data-mdb-ripple-init
                   class="btn btn-outline-success ms-1 text-succes hover:text-white" type="submit" value="Submit" form="form_edit">Save</button>
                   <button type="button" data-mdb-button-init data-mdb-ripple-init
-                  class="cancel-button" class="btn btn-outline-danger ms-1 ">
-                  <a class="text-danger" href="/src/vistas/perfil.php">
+                class="btn btn-outline-danger ms-1 close-session-button" class="boton-danger"><a class="boton-danger" href="/src/vistas/perfil.php">
                     Cancel
                 </a>
             </button>
