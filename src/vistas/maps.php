@@ -8,67 +8,67 @@
     <title>Mapa</title>
     <link rel="stylesheet" href="/src/css/style-main.css">
 
-    <!-- Leaflet CSS -->
+    <!-- Incloem el CSS de Leaflet per a mostrar el mapa -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
+        /* Estil del mapa */
         #mapid {
-            height: 70vh;  /* Ajuste de altura del mapa a 90% de la ventana */
-            width: 100%;
-            margin-top: 5%; /* Sin separación para que esté justo debajo del navbar */
-            border-radius: 10px;
-
+            height: 70vh;  /* Ajustem l'altura del mapa al 70% de la finestra */
+            width: 100%;   /* El mapa ocupa tota l'amplada de la pàgina */
+            margin-top: 5%; /* Petita separació del navbar */
+            border-radius: 10px; /* Arrodonim les cantonades del mapa */
         }
 
+        /* Estil per al logo (si n'hi ha) */
         .logo-img {
-            width: 40px;  /* Tamaño de logo ajustado */
-            height: auto;
+            width: 40px;  /* Ajustem el tamany del logo */
+            height: auto; /* Mantenim la proporció de l'altura */
         }
-        
 
-
-        /* Media query para dispositivos móviles */
+        /* Media query per adaptar el mapa a pantalles més petites */
         @media (max-width: 768px) {
             #mapid {
-                height: 80vh; /* Ajusta la altura en móviles si es necesario */
-                margin-top: 17%;
-                border-radius: 10px;
+                height: 80vh; /* Augmentem l'altura a pantalles petites si és necessari */
+                margin-top: 17%; /* Més separació del navbar */
+                border-radius: 10px; /* Mantenim les cantonades arrodonides */
             }
             .navbar-brand span {
-                font-size: 1rem;
+                font-size: 1rem; /* Reduïm la mida de la font del logo en mòbils */
             }
         }
     </style>
 </head>
 <body class="bg-light">
 
-<?php include 'C:\Users\farre\Desktop\CLASE\agendafigueres\src\vistas\navbar.php'; ?>
+<!-- Incloem el navbar de la pàgina -->
+<?php include '..\vistas\navbar.php'; ?>
 
-
-<section id="map" style="padding-top: 56px;"> <!-- Padding para separar del navbar -->
-    <div id="mapid"></div>
+<section id="map" style="padding-top: 56px;"> <!-- Afegim un padding per separar del navbar -->
+    <div id="mapid"></div> <!-- On es renderitzarà el mapa -->
 </section>
 
-<!-- Leaflet JS -->
+<!-- Incloem el JS de Leaflet per carregar i gestionar el mapa -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function() {
-        // Inicia el mapa Leaflet
-        const map = L.map('mapid').setView([42.2674, 2.9556], 13);  // Coordenadas de Barcelona, ajusta según sea necesario
+        // Inicialitzem el mapa amb les coordenades de Figueres
+        const map = L.map('mapid').setView([42.2674, 2.9556], 13);  // Coordenades de Figueres (ajusta segons sigui necessari)
+        
+        // Afegim la capa del mapa amb OpenStreetMap
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 80,
+            maxZoom: 80,  // Màxim nivell de zoom
         }).addTo(map);
 
-        // Puedes agregar un marcador opcionalmente
+        // Afegim un marcador a les coordenades especificades
         L.marker([42.2674, 2.9556]).addTo(map)
-            .bindPopup('Ubicación de eventos')
-            .openPopup();
+            .bindPopup('Ubicació de l\'esdeveniment')  // Text que apareix quan fem clic al marcador
+            .openPopup();  // Obrim el popup per defecte
     });
 </script>
 
-<!-- footer -->
-<?php include 'C:\Users\farre\Desktop\CLASE\agendafigueres\src\vistas\footer.php'; ?>
-
+<!-- Incloem el peu de pàgina -->
+<?php include '..\vistas\footer.php'; ?>
 
 </body>
 </html>

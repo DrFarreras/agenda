@@ -867,3 +867,61 @@ a:hover .bi-geo-alt {
     vertical-align: middle;
 }
 
+/* Css faq.php */
+#faq-css {
+    background-color: #abd5b2;
+    box-shadow:
+        0 -3em 3em rgba(0, 0, 0, 0.1), /* Sombra exterior superior */
+        0 0 0 2px rgb(255, 255, 255),  /* Borde blanco */
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    margin-top: 17vh;
+    display: flex; /* Usamos flex para apilar los elementos en columna */
+    padding: 10vh;
+    flex-direction: column;
+}
+
+#faq-gap-css{
+    display: flex;
+    gap: 3vh;
+    flex-direction: column;
+}
+
+.titol_faq{
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.3em;
+    padding: 10px;
+    background-color: #9ac3a1; /* Color suave para el fondo */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.faq-question:hover {
+    background-color: #c4dfc0; /* Color cuando se pasa el ratón */
+}
+
+.faq-answer {
+    display: none; /* Por defecto, las respuestas están ocultas */
+    margin-left: 20px;
+    font-size: 1.1em;
+}
+
+.faq-question .arrow {
+    margin-left: auto; /* Mueve la flecha hacia la derecha */
+    transition: transform 0.3s ease; /* Suaviza la animación de la flecha */
+}
+
+.faq-question.open .arrow {
+    transform: rotate(90deg); /* Rota la flecha al hacer clic */
+}
+
+.faq-question.open + .faq-answer {
+    display: block; /* Muestra la respuesta cuando se hace clic en la pregunta */
+}
