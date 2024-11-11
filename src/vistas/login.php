@@ -64,13 +64,14 @@
 								</div>
 							</form>
 						</div>
+						
 						<!-- Peu de la card amb enllaç a registre -->
 						<div class="card-footer py-3 border-0">
 							<div class="text-center">
 								No tens un compte? <a href="register.php" class="text-dark">Crea'n una</a>
 							</div>
 						</div>
-						
+
 					</div>
 					<!-- Text de copyright a la part inferior -->
 					<div class="text-center mt-5 text-muted">
