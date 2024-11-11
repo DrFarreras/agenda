@@ -1,0 +1,26 @@
+<?php
+
+function loginNWcontroller($request, $response, $container) {
+    // Retrieve username and password from the POST request
+    $nom_usuari = $request->get(INPUT_POST, 'nom_usuari');
+    $contrassenya = $request->get(INPUT_POST, 'contrassenya');
+
+    // Access the user model from the container
+    $userModel = $container->Users();
+
+    // Attempt to authenticate the user
+    $user = $userModel->getUserLogin($nom_usuari, $contrassenya);
+
+    if ($user) {
+        // Set session data if authentication is successful
+        $response->setSession('usuario', $user);
+
+        // Redirect to the main page or dashboard
+        $response->redirect("main.php");
+    } else {
+        // If authentication fails, set the login template again
+        $response->setTemplate('login.php');
+    }
+
+    return $response;
+}

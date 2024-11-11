@@ -1,14 +1,16 @@
 <?php
-include_once __DIR__ . '/../models/imagespdo.php'; // Adjust the path as necessary
-
-$config = require __DIR__ . '/../config/db.php'; // Assuming you have a db config file
+// Primero, asegúrate de que tienes la conexión y la llamada al método correcta
+include_once __DIR__ . '/../models/imagespdo.php';
+$config = require __DIR__ . '/../config/db.php';
 $usuarisPDO = new \Daw\UsuarisPDO($config);
 
 try {
-    $eventos = $usuarisPDO->getAllEvents(); // Assuming this method exists in your model
+    $eventos = $usuarisPDO->getAllEvents();
+    // Debug para ver qué contiene $eventos
+    error_log('Eventos encontrados: ' . print_r($eventos, true));
 } catch (Exception $e) {
     $eventos = [];
-    echo "Error fetching events: " . $e->getMessage();
+    error_log("Error: " . $e->getMessage());
 }
 ?>
 
@@ -33,11 +35,10 @@ try {
         </a>
         <ul class="navbar-links">
             <li><a href="#inicio"><i class="bi bi-search"></i></a></li>
+            <li><a href="perfil.php"><i class="bi bi-person-fill"></i></a></li>
             <?php if (isset($_SESSION['usuario'])): ?>
                 <li><a href="perfil.php"><i class="bi bi-person-fill"></i></a></li>
-                <li><a href="logout.php" title="Cerrar Sesión"><i class="bi bi-box-arrow-right"></i></a></li>
-            <?php else: ?>
-                <li><a href="login.php" title="Perfil"><i class="bi bi-person-fill"></i></i></a></li>
+                <li><a href="logout.php" title="Cerrar Sesión"><i class="bi bi-box-arrow-right"></i></a></li>                <li><a href="login.php" title="Perfil"><i class="bi bi-person-fill"></i></i></a></li>
                 <li><a href="login.php" title="Iniciar Sesión"><i class="bi bi-box-arrow-in-right"></i></a></li>
             <?php endif; ?>
         </ul>
@@ -113,6 +114,9 @@ try {
                 </div>
             </div>
         <?php endforeach; ?>
+    </div>
+    <div class="text-center mt-4 mb-4">
+        <a href="events.php" class="btn-evento">Ver todos los eventos</a>
     </div>
 <?php else: ?>
     <p>No hay eventos disponibles.</p>

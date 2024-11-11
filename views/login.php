@@ -3,12 +3,6 @@ session_start();
 require_once __DIR__ . '/../middleware/auth.php';
 require_once __DIR__ . '/../models/imagespdo.php';
 
-// Si el usuario ya está autenticado, redirigir a main.php
-if (isset($_SESSION['usuario'])) {
-    header('Location: main.php');
-    exit();
-}
-
 // Procesar el formulario de login
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'] ?? '';

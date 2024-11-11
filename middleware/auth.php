@@ -6,12 +6,14 @@ if (session_status() === PHP_SESSION_NONE) {
 /**
  * Verifica si el usuario está autenticado y tiene los permisos necesarios
  */
+
+
 function checkAuth() {
-    // Si no hay sesión de usuario, redirigir al login
     if (!isset($_SESSION['usuario']) || empty($_SESSION['usuario'])) {
         header("Location: login.php");
         exit();
     }
+}
 
     // Obtener la página actual
     $current_page = basename($_SERVER['PHP_SELF']);
@@ -24,7 +26,7 @@ function checkAuth() {
         header("Location: main.php");
         exit();
     }
-}
+
 
 /**
  * Verifica si el usuario está logueado

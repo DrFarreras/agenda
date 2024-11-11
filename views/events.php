@@ -76,12 +76,10 @@ try {
             </div>
         <?php endforeach; ?>
     </div>
+
 <?php else: ?>
     <p>No hay eventos disponibles.</p>
 <?php endif; ?>
-
-<div class="more-events">
-    <a href="more_events.php? class="btn-evento">Ver más</a>
     <!-- Footer -->
     <footer class="footer bg-light py-3">
     <div class="container">

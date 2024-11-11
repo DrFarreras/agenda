@@ -1253,20 +1253,3 @@ a:hover .bi-box-arrow-right {
     animation: fadeIn 0.6s ease-out;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #343a40;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #28a745;
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #218838;
-}
