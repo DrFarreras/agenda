@@ -58,6 +58,7 @@
             </div>
         </div>
     </div>
+    
 
     <!-- Inclou el footer amb informació addicional -->
     <?php include '..\vistas\footer.php'; ?>
