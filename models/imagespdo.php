@@ -61,7 +61,7 @@ class UsuarisPDO extends BasePDO {
         }
     }
 
-    public function getAllEvents() {
+      public function getAllEvents() {
         try {
             $stmt = $this->db->prepare("SELECT * FROM ESDEVENIMENTS");
             $stmt->execute();
@@ -70,6 +70,33 @@ class UsuarisPDO extends BasePDO {
             throw new Exception("Error al obtener los eventos: " . $e->getMessage());
         }
     }
+
+    public function getUpcomingEvents($limit = 1) {
+        try {
+            $query = "SELECT * FROM esdeveniments 
+                      WHERE data >= CURDATE() 
+                      ORDER BY data ASC, hora ASC 
+                      LIMIT 3";
+            
+            $stmt = $this->db->prepare($query);
+            $stmt->bindValue(1, $limit, PDO::PARAM_INT);
+            $stmt->execute();
+            
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            error_log("Eventos encontrados: " . count($results));
+            
+            return $results;
+        } catch (\PDOException $e) {
+            error_log("Error al obtener los próximos eventos: " . $e->getMessage());
+            return [];
+        }
+    }
+
+    /**
+     * Método alternativo para obtener todos los eventos
+     * @return array
+     */
+  
 
     public function getById($id) {
         try {
@@ -334,10 +361,10 @@ class UsuarisPDO extends BasePDO {
             // Debug: Imprimir la consulta
             error_log("Consultando usuario con ID: " . $userId);
             
-            $query = "SELECT id, nom, cognoms, correu_electronic, nom_usuari, 
-                            rol, data_registre, ultima_connexio, imatge_perfil 
-                     FROM usuaris 
-                     WHERE id = :id";
+            $query = "SELECT id_usuari, nom, cognoms, correu_electronic, nom_usuari, 
+                            rol, imatge_perfil 
+                     FROM USUARI 
+                     WHERE id_usuari = :id";
             
             $stmt = $this->db->prepare($query);
             $stmt->execute([':id' => $userId]);
@@ -435,17 +462,7 @@ class EsdevenimentsPDO extends BasePDO {
      * @param int $id
      * @return array|null
      */
-    public function getById($id) {
-        try {
-            $query = "SELECT * FROM {$this->table} WHERE {$this->idColumn} = :id";
-            $stmt = $this->sql->prepare($query);
-            $stmt->execute(['id' => $id]);
-            return $stmt->fetch(\PDO::FETCH_ASSOC);
-        } catch (\PDOException $e) {
-            error_log("Error al obtener el evento: " . $e->getMessage());
-            return null;
-        }
-    }
+    
 
     /**
      * Crea un nuevo evento
