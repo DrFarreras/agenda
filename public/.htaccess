@@ -1,0 +1,16 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /
+
+# Permitir acceso directo a archivos existentes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirigir el resto a index.php
+RewriteRule ^ index.php [L]
+
+# Configuración de permisos
+<Files *>
+    Order Allow,Deny
+    Allow from all
+</Files> 
