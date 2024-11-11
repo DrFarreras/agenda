@@ -24,30 +24,30 @@
 					<div class="card shadow-lg">
 						<div class="card-body p-5">
 							<!-- Títol de la pàgina -->
-							<h1 class="fs-4 card-title fw-bold mb-4">Login</h1>
+							<h1 class="fs-4 card-title fw-bold mb-4">Iniciar Sessió</h1>
 							<!-- Formulari de login -->
 							<form method="POST" class="needs-validation" novalidate="" autocomplete="off">
 								<div class="mb-3">
-									<label class="mb-2 text-muted" for="email">E-Mail Address</label>
+									<label class="mb-2 text-muted" for="email">Adreça email</label>
 									<!-- Camp per a l'adreça de correu electrònic -->
 									<input id="email" type="email" class="form-control" name="email" value="" required autofocus>
 									<div class="invalid-feedback">
-										Email is invalid <!-- Missatge d'error si el correu no és vàlid -->
+										El email no és vàlid <!-- Missatge d'error si el correu no és vàlid -->
 									</div>
 								</div>
 
 								<div class="mb-3">
 									<div class="mb-2 w-100">
-										<label class="text-muted" for="password">Password</label>
+										<label class="text-muted" for="password">Contrasenya</label>
 										<!-- Enllaç per a recuperar la contrasenya -->
 										<a href="#" class="float-end">
-											Forgot Password?
+											Has oblidat la contrasenya?
 										</a>
 									</div>
 									<!-- Camp per a la contrasenya -->
 									<input id="password" type="password" class="form-control" name="password" required>
 								    <div class="invalid-feedback">
-								    	Password is required <!-- Missatge d'error si la contrasenya no es proporciona -->
+								    	Es necessita una contrasenya <!-- Missatge d'error si la contrasenya no es proporciona -->
 							    	</div>
 								</div>
 
@@ -55,11 +55,11 @@
 									<!-- Checkbox per recordar l'usuari -->
 									<div class="form-check">
 										<input type="checkbox" name="remember" id="remember" class="form-check-input">
-										<label for="remember" class="form-check-label">Remember Me</label>
+										<label for="remember" class="form-check-label">Recordar-me</label>
 									</div>
 									<!-- Botó per a enviar el formulari -->
 									<button type="submit" class="btn btn-primary ms-auto">
-										Login
+										Iniciar Sessió
 									</button>
 								</div>
 							</form>
@@ -67,7 +67,7 @@
 						<!-- Peu de la card amb enllaç a registre -->
 						<div class="card-footer py-3 border-0">
 							<div class="text-center">
-								Don't have an account? <a href="register.php" class="text-dark">Create One</a>
+								No tens un compte? <a href="register.php" class="text-dark">Crea'n una</a>
 							</div>
 						</div>
 					</div>
