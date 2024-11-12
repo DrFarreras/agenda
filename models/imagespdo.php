@@ -45,7 +45,7 @@ class BasePDO {
     }
 }
 
-
+/*USUARI*/
 class UsuarisPDO extends BasePDO {
     private $db;
     public function __construct($config) {

@@ -32,7 +32,7 @@ class Response
      *
      * @param $path string path fins a la carpeta de plantilles.
      **/
-    public function __construct($path = "/src/vistas/")
+    public function __construct($path = "..")
     {
         $this->path = $path;
     }
