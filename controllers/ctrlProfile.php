@@ -1,7 +1,7 @@
 <?php
 
-function profilecontroller($request, $response, $container){
-    $userData = $_SESSION['usuario'];
+function ctrlprofile($request, $response, $container){
+    $userData = $_SESSION['user'];
 
     $response->set('userData', $userData);
 

@@ -21,6 +21,7 @@
                 <a href="logout.php" class="btn btn-outline-light">
                     <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
                 </a>
+
             </div>
         </div>
     </header>

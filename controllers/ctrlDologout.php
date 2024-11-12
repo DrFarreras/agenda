@@ -1,6 +1,6 @@
 <?php
 
-function logoutcontroller($request, $response, $container){
+function ctrlDologout($request, $response, $container){
 
     // Inicia la sesión si no está ya iniciada
     if (session_status() === PHP_SESSION_NONE) {
@@ -8,7 +8,7 @@ function logoutcontroller($request, $response, $container){
     }
 
     // Destruye todos los datos de la sesión
-    $response->setSession("usuario", []);
+    $response->setSession("user", []);
     session_unset();     // Elimina todas las variables de sesión
     session_destroy();   // Destruye la sesión
 

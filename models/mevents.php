@@ -3,7 +3,7 @@ require_once '../config/db.php';
 
 class Event {
     private $conn;
-    private $table = "events";
+    private $table = "ESDEVENIMENTS";
 
     public function __construct($db) {
         $this->conn = $db;
@@ -16,17 +16,15 @@ class Event {
         return $stmt;
     }
 
-    public function createEvent($title, $description, $latitude, $longitude, $date, $time, $type) {
-        $query = "INSERT INTO " . $this->table . " (title, description, latitude, longitude, date, time, type) 
-                  VALUES (:title, :description, :latitude, :longitude, :date, :time, :type)";
+    public function createEvent($title, $description, $date, $time, $type) {
+        $query = "INSERT INTO {$this->table} (titol, descripcio, data, hora, imatge) 
+                     VALUES (:titol, :descripcio, :data, :hora, :imatge)";
         $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(":title", $title);
-        $stmt->bindParam(":description", $description);
-        $stmt->bindParam(":latitude", $latitude);
-        $stmt->bindParam(":longitude", $longitude);
-        $stmt->bindParam(":date", $date);
-        $stmt->bindParam(":time", $time);
-        $stmt->bindParam(":type", $type);
+        $stmt->bindParam(":titol", $title);
+        $stmt->bindParam(":descripcio", $description);
+        $stmt->bindParam(":data", $date);
+        $stmt->bindParam(":hora", $time);
+        $stmt->bindParam(":imatge", $type);
 
         return $stmt->execute();
     }

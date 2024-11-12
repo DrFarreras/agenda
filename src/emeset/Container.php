@@ -10,7 +10,7 @@
 
 namespace Emeset;
 
-
+use Users; // Ensure this is the correct namespace for your Users class
 
 /**
  * Container: Classe contenidor.
@@ -42,6 +42,12 @@ class Container
     public function request()
     {
         return new \Emeset\Request();
+    }
+
+    public function Users()
+    {
+        $pdo = new \PDO($this->config['dsn'], $this->config['nom_usuari'], $this->config['contrassenya']);
+        return new Users($pdo);
     }
 
 }
