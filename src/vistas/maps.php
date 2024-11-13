@@ -8,66 +8,66 @@
     <title>Mapa</title>
     <link rel="stylesheet" href="/src/css/style-main.css">
 
-    <!-- Incloem el CSS de Leaflet per a mostrar el mapa -->
+    <!-- Includes the CSS for Leaflet to display the map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
-        /* Estil del mapa */
+        /* Map styling */
         #mapid {
-            height: 70vh;  /* Ajustem l'altura del mapa al 70% de la finestra */
-            width: 100%;   /* El mapa ocupa tota l'amplada de la pàgina */
-            margin-top: 5%; /* Petita separació del navbar */
-            border-radius: 10px; /* Arrodonim les cantonades del mapa */
+            height: 70vh;  /* Adjust the map height to 70% of the window */
+            width: 100%;   /* The map occupies the full width of the page */
+            margin-top: 5%; /* Small margin from the navbar */
+            border-radius: 10px; /* Round the corners of the map */
         }
 
-        /* Estil per al logo (si n'hi ha) */
+        /* Styling for the logo (if present) */
         .logo-img {
-            width: 40px;  /* Ajustem el tamany del logo */
-            height: auto; /* Mantenim la proporció de l'altura */
+            width: 40px;  /* Adjust the logo size */
+            height: auto; /* Maintain the height-to-width ratio */
         }
 
-        /* Media query per adaptar el mapa a pantalles més petites */
+        /* Media query to adapt the map to smaller screens */
         @media (max-width: 768px) {
             #mapid {
-                height: 80vh; /* Augmentem l'altura a pantalles petites si és necessari */
-                margin-top: 17%; /* Més separació del navbar */
-                border-radius: 10px; /* Mantenim les cantonades arrodonides */
+                height: 80vh; /* Increase the height on smaller screens if needed */
+                margin-top: 17%; /* More space from the navbar */
+                border-radius: 10px; /* Keep the rounded corners */
             }
             .navbar-brand span {
-                font-size: 1rem; /* Reduïm la mida de la font del logo en mòbils */
+                font-size: 1rem; /* Reduce the font size of the logo on mobile devices */
             }
         }
     </style>
 </head>
 <body class="bg-light">
 
-<!-- Incloem el navbar de la pàgina -->
+<!-- Includes the navbar for the page -->
 <?php include '..\vistas\navbar.php'; ?>
 
-<section id="map" style="padding-top: 56px;"> <!-- Afegim un padding per separar del navbar -->
-    <div id="mapid"></div> <!-- On es renderitzarà el mapa -->
+<section id="map" style="padding-top: 56px;"> <!-- Adds padding to separate from the navbar -->
+    <div id="mapid"></div> <!-- Where the map will be rendered -->
 </section>
 
-<!-- Incloem el JS de Leaflet per carregar i gestionar el mapa -->
+<!-- Includes the Leaflet JS to load and manage the map -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function() {
-        // Inicialitzem el mapa amb les coordenades de Figueres
-        const map = L.map('mapid').setView([42.2674, 2.9556], 13);  // Coordenades de Figueres (ajusta segons sigui necessari)
+        // Initialize the map with the coordinates of Figueres
+        const map = L.map('mapid').setView([42.2674, 2.9556], 13);  // Coordinates for Figueres (adjust as necessary)
         
-        // Afegim la capa del mapa amb OpenStreetMap
+        // Add the OpenStreetMap tile layer to the map
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 80,  // Màxim nivell de zoom
+            maxZoom: 80,  // Maximum zoom level
         }).addTo(map);
 
-        // Afegim un marcador a les coordenades especificades
+        // Add a marker at the specified coordinates
         L.marker([42.2674, 2.9556]).addTo(map)
-            .bindPopup('Ubicació de l\'esdeveniment')  // Text que apareix quan fem clic al marcador
-            .openPopup();  // Obrim el popup per defecte
+            .bindPopup('Ubicació del esdeveniment')  // Text that appears when clicking the marker
+            .openPopup();  // Open the popup by default
     });
 </script>
 
-<!-- Incloem el peu de pàgina -->
+<!-- Includes the footer -->
 <?php include '..\vistas\footer.php'; ?>
 
 </body>
