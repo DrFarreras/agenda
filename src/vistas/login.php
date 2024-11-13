@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="author" content="Muhamad Nauval Azhar">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<meta name="description" content="Aquesta és una plantilla de pàgina de login basada en Bootstrap 5">
+	<meta name="description" content="This is a login page template based on Bootstrap 5">
 	<title>Login</title>
 	<!-- Link to the Bootstrap stylesheet -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -23,23 +23,23 @@
 					<!-- Login card -->
 					<div class="card shadow-lg">
 						<div class="card-body p-5">
-							<!-- Títol de la pàgina -->
+							<!-- Page title -->
 							<h1 class="fs-4 card-title fw-bold mb-4">Iniciar Sessió</h1>
-							<!-- Formulari de login -->
+							<!-- Login form -->
 							<form method="POST" class="needs-validation" novalidate="" autocomplete="off">
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="email">Adreça email</label>
-									<!-- Camp per a l'adreça de correu electrònic -->
+									<!-- Field for the email address -->
 									<input id="email" type="email" class="form-control" name="email" value="" required autofocus>
 									<div class="invalid-feedback">
-										Email is invalid <!-- Missatge d'error si el correu no és vàlid -->
+										El email no és vàlid <!-- Error message if the email is not valid -->
 									</div>
 								</div>
 
 								<div class="mb-3">
 									<div class="mb-2 w-100">
 										<label class="text-muted" for="password">Password</label>
-										<!-- Enllaç per a recuperar la contrasenya -->
+										<!-- Link for password recovery -->
 										<a href="#" class="float-end">
 											Has oblidat la contrasenya?
 										</a>
@@ -47,7 +47,7 @@
 									<!-- Field for the password -->
 									<input id="password" type="password" class="form-control" name="password" required>
 								    <div class="invalid-feedback">
-								    	Es necessita una contrasenya <!-- Missatge d'error si la contrasenya no es proporciona -->
+								    	Es necessita una contrasenya <!-- Error message if the password is not provided -->
 							    	</div>
 								</div>
 
@@ -64,8 +64,9 @@
 								</div>
 							</form>
 						</div>
-						<!-- Peu de la card amb enllaç a registre -->
+						<!-- Footer of the card with link to register -->
 
+						
 						<div class="card-footer py-3 border-0">
 							<div class="text-center">
 								No tens un compte? <a href="register.php" class="text-dark">Crea'n una</a>
