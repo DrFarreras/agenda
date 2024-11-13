@@ -8,50 +8,50 @@
 </head>
 <body>
     
-    <!-- Inclou el nav per al menú de navegació -->
+    <!-- Includes the navigation bar for the navigation menu -->
     <?php include '..\vistas\navbar.php'; ?>
 
-    <!-- Inici del bloc principal de la secció de preguntes i respostes -->
+    <!-- Start of the main block for the questions and answers section -->
     <div class="card mb-4 mb-lg-0 m-4 p-2" id="faq-css">
         <div class="card-body p-0" id="faq-gap-css">
-            <!-- Títol principal de la secció FAQ -->
+            <!-- Main title of the FAQ section -->
             <div class="titol_faq"><h1>Preguntes i Respostes</h1></div>
             <hr>
 
-            <!-- Pregunta 1 -->
+            <!-- Question 1 -->
             <div class="faq-question">
                 <h3>Quin tipus d’esdeveniments s’organitzen al poble?</h3>
-                <span class="arrow"><i class="bi bi-caret-right-fill"></i></span> <!-- Flecha que indica que la pregunta pot desplegar-se -->
+                <span class="arrow"><i class="bi bi-caret-right-fill"></i></span> <!-- Arrow indicating the question can expand -->
             </div>
             <div class="faq-answer">
                 <p>Són principalment esdeveniments a l’aire lliure, com fires d’agricultura, tallers de reciclatge o caminades ecològiques. Inclouen activitats comunitàries, com neteja d’espais naturals o tallers d’horts urbans.</p>
             </div>
             <hr>
 
-            <!-- Pregunta 2 -->
+            <!-- Question 2 -->
             <div class="faq-question">
                 <h3>Quins són els temes centrals d’aquests esdeveniments?</h3>
-                <span class="arrow"><i class="bi bi-caret-right-fill"></i></span> <!-- Flecha que indica que la pregunta pot desplegar-se -->
+                <span class="arrow"><i class="bi bi-caret-right-fill"></i></span> <!-- Arrow indicating the question can expand -->
             </div>
             <div class="faq-answer">
                 <p>Hi ha un enfocament específic en temes com la sostenibilitat, energies renovables, alimentació saludable o biodiversitat local.</p>
             </div>
             <hr>
 
-            <!-- Pregunta 3 -->
+            <!-- Question 3 -->
             <div class="faq-question">
                 <h3>Quin perfil de persones assisteix a aquests esdeveniments?</h3>
-                <span class="arrow"><i class="bi bi-caret-right-fill"></i></span> <!-- Flecha que indica que la pregunta pot desplegar-se -->
+                <span class="arrow"><i class="bi bi-caret-right-fill"></i></span> <!-- Arrow indicating the question can expand -->
             </div>
             <div class="faq-answer">
                 <p>Són esdeveniments familiars, per a turistes interessats en l’ecologia, o pensats per a residents del poble. Hi ha activitats dirigides a diferents grups, com infants, joves, adults o gent gran.</p>
             </div>
             <hr>
 
-            <!-- Pregunta 4 -->
+            <!-- Question 4 -->
             <div class="faq-question">
                 <h3>Quina importància tenen les imatges i descripcions de cada esdeveniment?</h3>
-                <span class="arrow"><i class="bi bi-caret-right-fill"></i></span> <!-- Flecha que indica que la pregunta pot desplegar-se -->
+                <span class="arrow"><i class="bi bi-caret-right-fill"></i></span> <!-- Arrow indicating the question can expand -->
             </div>
             <div class="faq-answer">
                 <p>Es mostren fotos d’esdeveniments anteriors, mapes de localització o il·lustracions.</p>
@@ -59,15 +59,15 @@
         </div>
     </div>
 
-    <!-- Inclou el footer amb informació addicional -->
+    <!-- Includes the footer with additional information -->
     <?php include '..\vistas\footer.php'; ?>
 
-    <!-- Script per gestionar el desplegament de les respostes de les preguntes -->
+    <!-- Script to manage the deployment of answers to the questions -->
     <script>
-        // Afegim un esdeveniment 'click' a cada pregunta FAQ
+        // Adds a 'click' event to each FAQ question
         document.querySelectorAll('.faq-question').forEach(function(question) {
             question.addEventListener('click', function() {
-                // Alternem la classe 'open' per mostrar o amagar la resposta associada a la pregunta
+                // Toggles the 'open' class to show or hide the answer associated with the question
                 this.classList.toggle('open');
             });
         });

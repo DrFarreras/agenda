@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
+body{
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     color: #333;
@@ -77,7 +77,7 @@ body {
 }
 
 /* Contenido */
-.container {
+.container-footer {
     margin-top: 30px;
     width: 100%;
     padding: 0;
@@ -925,3 +925,32 @@ a:hover .bi-geo-alt {
 .faq-question.open + .faq-answer {
     display: block; /* Muestra la respuesta cuando se hace clic en la pregunta */
 }
+
+
+/* Estils per al mode clar (per defecte) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Fons blanc */
+    color: #000000; /* Text negre */
+    transition: background-color 0.3s, color 0.3s; /* Transició suau per al canvi de colors */
+}
+
+/* Estils per al mode fosc */
+body.modo-oscuro {
+    background-color: #121212; /* Fons fosc */
+    color: #e0e0e0; /* Text clar */
+}
+
+body.modo-oscuro a {
+    color: #bb86fc; /* Enllaços amb un color suau per al mode fosc */
+}
+
+
+
+body.modo-oscuro {
+    color: #e0e0e0; /* Enllaços clars a la navbar */
+}
+
+
+
+

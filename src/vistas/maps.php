@@ -5,69 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Mapa</title>
+    <title>Maps</title>
     <link rel="stylesheet" href="/src/css/style-main.css">
 
-    <!-- Incloem el CSS de Leaflet per a mostrar el mapa -->
+    <!-- We include Leaflet's CSS to properly style and display the map on the webpage -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
-        /* Estil del mapa */
+        /* Styling for the map container */
         #mapid {
-            height: 70vh;  /* Ajustem l'altura del mapa al 70% de la finestra */
-            width: 100%;   /* El mapa ocupa tota l'amplada de la pàgina */
-            margin-top: 5%; /* Petita separació del navbar */
-            border-radius: 10px; /* Arrodonim les cantonades del mapa */
+            height: 70vh;  /* Set the map's height to 70% of the viewport height */
+            width: 100%;   /* Make the map take up the full width of the page */
+            margin-top: 5%; /* Add a small margin at the top to separate the map from the navbar */
+            border-radius: 10px; /* Round the corners of the map container for a smoother appearance */
         }
 
-        /* Estil per al logo (si n'hi ha) */
+        /* Styling for the logo image (if a logo is present) */
         .logo-img {
-            width: 40px;  /* Ajustem el tamany del logo */
-            height: auto; /* Mantenim la proporció de l'altura */
+            width: 40px;  /* Set the width of the logo to 40px */
+            height: auto; /* Automatically adjust the height to maintain the aspect ratio */
         }
 
-        /* Media query per adaptar el mapa a pantalles més petites */
+        /* Media query to make the map responsive on smaller screen sizes (e.g., mobile) */
         @media (max-width: 768px) {
             #mapid {
-                height: 80vh; /* Augmentem l'altura a pantalles petites si és necessari */
-                margin-top: 17%; /* Més separació del navbar */
-                border-radius: 10px; /* Mantenim les cantonades arrodonides */
+                height: 80vh; /* Increase the map height to 80% of the viewport height on smaller screens */
+                margin-top: 17%; /* Increase the margin-top to create more space from the navbar */
+                border-radius: 10px; /* Keep the rounded corners for the map container */
             }
             .navbar-brand span {
-                font-size: 1rem; /* Reduïm la mida de la font del logo en mòbils */
+                font-size: 1rem; /* Reduce the font size of the logo on mobile to make it fit better */
             }
         }
     </style>
 </head>
 <body class="bg-light">
 
-<!-- Incloem el navbar de la pàgina -->
+<!-- We include the navigation bar (navbar) from an external PHP file -->
 <?php include '..\vistas\navbar.php'; ?>
 
-<section id="map" style="padding-top: 56px;"> <!-- Afegim un padding per separar del navbar -->
-    <div id="mapid"></div> <!-- On es renderitzarà el mapa -->
+<section id="map" style="padding-top: 56px;"> <!-- Add padding to create separation between the map and navbar -->
+    <div id="mapid"></div> <!-- This is the div where the Leaflet map will be rendered and displayed -->
 </section>
 
-<!-- Incloem el JS de Leaflet per carregar i gestionar el mapa -->
+<!-- We include the Leaflet JavaScript library to manage and display the map functionality -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function() {
-        // Inicialitzem el mapa amb les coordenades de Figueres
-        const map = L.map('mapid').setView([42.2674, 2.9556], 13);  // Coordenades de Figueres (ajusta segons sigui necessari)
-        
-        // Afegim la capa del mapa amb OpenStreetMap
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 80,  // Màxim nivell de zoom
-        }).addTo(map);
 
-        // Afegim un marcador a les coordenades especificades
-        L.marker([42.2674, 2.9556]).addTo(map)
-            .bindPopup('Ubicació de l\'esdeveniment')  // Text que apareix quan fem clic al marcador
-            .openPopup();  // Obrim el popup per defecte
-    });
-</script>
+<!-- We include a custom script that sets up and customizes the Figueres map functionality -->
+<script src="../js/maps-figueres.js"></script>
 
-<!-- Incloem el peu de pàgina -->
+<!-- We include the footer from an external PHP file, containing additional page content -->
 <?php include '..\vistas\footer.php'; ?>
 
 </body>
