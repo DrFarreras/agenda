@@ -12,7 +12,7 @@
 
 <body style="background-color: rgb(159, 227, 159);">
     <section class="h-100">
-        <div class="container h-100">
+        <div class="container-footer h-100">
             <div class="row justify-content-sm-center h-100">
                 <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
                     <div class="text-center my-5">
@@ -20,9 +20,9 @@
                     <div class="card shadow-lg">
                         <div class="card-body p-5">
                             <h1 class="fs-4 card-title fw-bold mb-4">Registre</h1>
-                            <!-- Formulari de registre -->
+                            <!-- Registration form -->
                             <form method="POST" class="needs-validation" novalidate="" autocomplete="off">
-                                <!-- Nom -->
+                                <!-- Name -->
                                 <div class="mb-3">
                                     <label class="mb-2 text-muted" for="name">Nom</label>
                                     <input id="name" type="text" class="form-control" name="name" value="" required autofocus>
@@ -31,7 +31,7 @@
                                     </div>
                                 </div>
 
-                                <!-- Cognom -->
+                                <!-- Surname -->
                                 <div class="mb-3">
                                     <label class="mb-2 text-muted" for="name">Cognom</label>
                                     <input id="name" type="text" class="form-control" name="surname" value="" required autofocus>
@@ -40,7 +40,7 @@
                                     </div>
                                 </div>
 
-                                <!-- Nom d'usuari -->
+                                <!-- Username -->
                                 <div class="mb-3">
                                     <label class="mb-2 text-muted" for="name">Nom d'usuari</label>
                                     <input id="name" type="text" class="form-control" name="user" value="" required autofocus>
@@ -49,7 +49,7 @@
                                     </div>
                                 </div>
 
-                                <!-- Adreça de correu electrònic -->
+                                <!-- Email address -->
                                 <div class="mb-3">
                                     <label class="mb-2 text-muted" for="email">Adreça de mail</label>
                                     <input id="email" type="email" class="form-control" name="email" value="" required>
@@ -58,7 +58,7 @@
                                     </div>
                                 </div>
 
-                                <!-- Contrasenya -->
+                                <!-- Password -->
                                 <div class="mb-3">
                                     <label class="mb-2 text-muted" for="password">Contrasenya</label>
                                     <input id="password" type="password" class="form-control" name="password" required>
@@ -67,12 +67,12 @@
                                     </div>
                                 </div>
 
-                                <!-- Termes i condicions -->
+                                <!-- Terms and conditions -->
                                 <p class="form-text text-muted mb-3">
                                     Al registrar-te, acceptes els nostres termes i condicions.
                                 </p>
 
-                                <!-- Botó per registrar-se -->
+                                <!-- Button to register -->
                                 <div class="align-items-center d-flex">
                                     <button type="submit" class="btn btn-primary ms-auto">
                                         Registrar	
@@ -94,8 +94,8 @@
         </div>
     </section>
 
-    <!-- Script per a validació i funcionalitat de login -->
-    <script src="js/login.js"></script>
+    <!-- Script for login validation and functionality -->
+    <script src="../js/login.js"></script>
 </body>
 
 </html>
