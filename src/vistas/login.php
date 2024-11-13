@@ -63,6 +63,7 @@
 									</button>
 								</div>
 							</form>
+							
 						</div>
 						<!-- Footer of the card with link to register -->
 
