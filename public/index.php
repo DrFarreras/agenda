@@ -15,12 +15,6 @@ include '../src/controllers/ctrlFavoritos.php';
 include '../src/controllers/ctrlLogin.php';
 include '../src/controllers/ctrlRegister.php';
 include '../src/controllers/ctrlProfile.php';
-include '../src/controllers/ctrlDoRegister.php';
-include '../src/controllers/ctrlDashboardList.php';
-include '../src/controllers/ctrlDashboardDelete.php';
-include "../src/controllers/ctrlDashboardEdit.php";
-include "../src/controllers/ctrlDashboardEditUpdate.php";
-include "../src/controllers/ctrlDashboardAddUser.php";
 include "../src/controllers/ctrlDoLogin.php";
 include "../src/controllers/ctrlDoLogout.php";
 include "../src/controllers/ctrlConsejos.php";
@@ -30,6 +24,12 @@ include "../src/controllers/ctrlEventList.php";
 include "../src/controllers/ctrlDeleteEvent.php";
 include "../src/controllers/ctrlEditEvent.php";
 include "../src/controllers/ctrlsearchEvents.php";
+include '../src/controllers/ctrlDoRegister.php';
+include '../src/controllers/ctrlDashboardList.php';
+include '../src/controllers/ctrlDashboardDelete.php';
+include "../src/controllers/ctrlDashboardEdit.php";
+include "../src/controllers/ctrlDashboardEditUpdate.php";
+include "../src/controllers/ctrlDashboardAddUser.php";
 // Archivos Middleware
 
 include "../src/middleware/isLogged.php";
