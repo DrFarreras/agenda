@@ -67,7 +67,7 @@
 						</div>
 						<!-- Footer of the card with link to register -->
 
-						
+						 
 						<div class="card-footer py-3 border-0">
 							<div class="text-center">
 								No tens un compte? <a href="register.php" class="text-dark">Crea'n una</a>
