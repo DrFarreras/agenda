@@ -32,9 +32,11 @@ Frontend: Interfície moderna i intuïtiva per facilitar l’ús.
 -  Jquery
 -  Ajax
 -  Bootstrap
+  
 Backend: Gestió segura de dades i funcionalitats mitjançant una API robusta.
 -  Emeset Framework
 -  PHP
+  
 Base de dades: Emmagatzematge estructurat de la informació dels usuaris, esdeveniments i estadístiques.
 -  MySQL
 -  Docker
