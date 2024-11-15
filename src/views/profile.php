@@ -16,42 +16,9 @@
 </head>
 
 <body class="bg-custom-green-lightest">
-<nav class="navbar">
-    <div class="navbar-container">
-        <a href="#" class="navbar-brand">
-            <img src="/img/2.png" class="navbar-logo" alt="Logo">
-        </a>
-        <ul class="navbar-links">
-            <li><a href="#inicio"><i class="bi bi-search"></i></a></li>
-            <?php if (isset($_SESSION['user'])): ?>
-                <!-- Menú de usuario logueado -->
-                <div class="dropdown text-end">
-                    <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <?php if (!empty($_SESSION['user']['profile_img'])): ?>
-                            <img src="<?= $_SESSION['user']['profile_img'] ?>" alt="Foto de perfil" width="32" height="32" class="rounded-circle">
-                        <?php else: ?>
-                            <img src="/public/img/default.png" alt="Default Profile" width="32" height="32" class="rounded-circle">
-                        <?php endif; ?>
-                    </a>
-                    <ul class="dropdown-menu text-small">
-                        <?php if ($_SESSION['user']['role'] === 'administrator'): ?>
-                            <li><a class="dropdown-item" href="index.php?r=dashboard">Dashboard</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                        <?php endif; ?>
-                        <li><a class="dropdown-item" href="index.php?r=profile">Perfil</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="index.php?r=dologout">Cerrar sesión</a></li>
-                    </ul>
-                </div>
-            <?php else: ?>
-                <li><a href="/?r=login" title="Iniciar Sesión"><i class="bi bi-box-arrow-in-right"></i></a></li>
-                <li><a href="/?r=register" title="Registrarse"><i class="bi bi-person-plus"></i></a></li>
-            <?php endif; ?>
-        </ul>
-    </div>
-</nav>
+<?php include_once 'navbar.php'; ?>
 
-    <div class="container-profile mt-5" id="profile-container">
+    <div class="container-lg mt-5" id="profile-container">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h1 class="text-center mb-4">Editar Perfil</h1>
@@ -65,17 +32,17 @@
                     <?php endif; ?>
                     <input type="file" class="form-control mt-2" name="profile_img" accept="image/*">
                 </div>
-                    <div class="mb-3">
+                        <div class="row mb-3">
                         <input type="text" class="form-control" name="name" placeholder="Nombre" value="<?php echo htmlspecialchars($userData['name'])?>" required>
                     </div>
-                    <div class="mb-3">
+                    <div class="row mb-3">
                         <input type="text" class="form-control" name="lastname" placeholder="Apellidos" value="<?= $userData['username']?>" required>
                     </div>
-                    <div class="mb-3">
+                    <div class="row mb-3">
                         <label for="emailInput" hidden>Email Address:</label>
                         <input type="text" id="emailInput" class="form-control" name="email" value="<?= $userData['email']?>" required>
                     </div>
-                    <div class="mb-3">
+                    <div class="row mb-3">
                         <input type="password" class="form-control" name="password" placeholder="Contraseña" minlength="8" maxlength="20">
                     </div>
                     <div class="d-flex justify-content-end">

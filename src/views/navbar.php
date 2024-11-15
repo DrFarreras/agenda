@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container-lg">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.php">
             <img src="/img/2.png" class="navbar-logo" alt="Logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +25,6 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <?php if ($_SESSION['user']['role'] === 'administrator'): ?>
                                 <li><a class="dropdown-item" href="index.php?r=dashboard">Dashboard</a></li>
-                                <li><hr class="dropdown-divider"></li>
                             <?php endif; ?>
                             <li><a class="dropdown-item" href="index.php?r=profile">Perfil</a></li>
                             <li><a class="dropdown-item" href="index.php?r=dologout">Cerrar sesión</a></li>

@@ -12,68 +12,12 @@
 </head>
 
 <body class="bg-custom-green-lightest">
-
-    <!-- Barra superior con buscador -->
-    <div class="bg-custom-green-darkest py-2 navbar-admin-panel">
-        <div class="container d-flex align-items-center justify-content-between">
-            <a href="index.php">
-                <img src="/img/2.png" alt="" srcset="" class="navbar-logo">
-            </a>
-            <div class="input-group w-50">
-                <input type="text" class="form-control" placeholder="Busqueda de consejos, anuncios e eventos..." />
-                <button class="btn btn-outline-secondary">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
+<?php include_once 'navbar.php'; ?>
         
-
-                <?php if (isset($_SESSION['user'])): ?>
-                    <!-- Menú de usuario logueado -->
-                    <div class="dropdown text-end">
-                        <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            <?php if (!empty($_SESSION['user']['profile_img'])): ?>
-                                <img src="<?= $_SESSION['user']['profile_img'] ?>" alt="Foto de perfil" width="32" height="32" class="rounded-circle">
-                            <?php else: ?>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="32" height="32">
-                                    <circle cx="100" cy="100" r="100" fill="#1F2937" />
-                                    <circle cx="100" cy="85" r="35" fill="#F9FAFB" />
-                                    <path d="M100 125 C40 125, 40 200, 40 200 L160 200 C160 200, 160 125, 100 125" fill="#F9FAFB" />
-                                </svg>
-                            <?php endif; ?>
-                        </a>
-                        <ul class="dropdown-menu text-small">
-                            <?php if ($_SESSION['user']['role'] === 'administrator'): ?>
-                                <li><a class="dropdown-item" href="index.php?r=dashboard">Dashboard</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                            <?php endif; ?>
-                            <li><a class="dropdown-item" href="index.php?r=profile">Perfil</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="index.php?r=dologout">Cerrar sesión</a></li>
-                        </ul>
-                    </div>
-                <?php else: ?>
-                    <!-- Botones de registro e inicio de sesión para usuarios no logueados -->
-                    <div class="text-end">
-                        <button type="button" class="hover-white me-2">
-                            <a href="/?r=login">Iniciar Sesión</a>
-                        </button>
-                        <button type="button" class="hover-white me-2">
-                            <a href="/?r=register">Registrarse</a>
-                        </button>
-                    </div>
-                <?php endif; ?>
-            </div>
-        </div>
-    </div>
-
     <!-- Contenido principal -->
-    <div class="container mt-4">
-        <div class="card">
-            <div class="card-header d-flex pt-3 justify-content-between">
+    <div class="container-lg mt-4">
+        <div class="card justify-content-center" style="margin-top: 15%; margin-left: 9%;">
+            <div class="card-header d-flex pt-3 justify-content-between align-items-center">
                 <h3>Gestión de Usuarios</h3>
                 <button class="btn btn-primary bg-custom-green-darkest" data-bs-toggle="modal" data-bs-target="#addUserModal">Agregar Usuario</button>
             </div>

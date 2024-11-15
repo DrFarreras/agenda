@@ -51,6 +51,7 @@
         <p class="text-center">Nos dedicamos a informar y mantener a nuestra comunidad actualizada sobre los eventos, anuncios y actividades más relevantes de Figueres. Nuestro compromiso es conectar a los ciudadanos con iniciativas y eventos sostenibles, culturales, y comunitarios, fomentando así un estilo de vida más consciente y en armonía con el entorno. Con nosotros, estarás al tanto de todo lo que sucede en Figueres y sus alrededores para que puedas participar y disfrutar de lo que nuestra ciudad tiene para ofrecer. ¡Súmate y descubre todo lo que Figueres tiene para ti!</p>
     </div>
 
+
     <!-- Botón de eventos -->
     <div class="d-flex justify-content-center align-items-center mb-5">
         <a href="index.php?r=eventos" class="btn btn-eventos">Cargar Eventos</a>                            

@@ -58,10 +58,10 @@
                             <?php if (isset($_SESSION['user']) && $_SESSION['user']['role'] === 'administrator'): ?>
                                 <!-- Posicionamiento del dropdown en la esquina superior derecha -->
                                 <div class="dropdown position-absolute top-0 end-0 mt-2 me-2">
-                                    <button class="btn btn-sm btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-sm btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" hidden>
                                         <i class="bi bi-three-dots-vertical"></i>
                                     </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
                                         <!-- Opción Editar -->
                                         <li><a class="dropdown-item" href="index.php?r=editarevento&id=<?php echo $event['event_id']; ?>">Editar</a></li>
                                         <!-- Opción Eliminar -->
