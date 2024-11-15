@@ -1,0 +1,956 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    width: 100%;
+    overflow-x: hidden;
+}
+/* Scrollbar */
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 5px;
+  }
+  /*Scrollbar*/
+  ::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top, #45a049, #39bd40,#1a4d1d, #134216);
+    border-radius: 100px;
+  }
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background-color: #45a049;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.navbar-logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+    color: #45a049;
+    text-decoration: none;
+}
+
+/* Contenido */
+.container-footer {
+    margin-top: 30px;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+.footer {
+    background: rgb(241, 241, 241);
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    opacity: 0.9;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h5 {
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #45a049;
+}
+
+/* Estilos para los iconos sociales */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    white-space: nowrap;
+
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+
+}
+
+
+/* Estilo para la sección de copyright con centramiento */
+.footer {
+    background: rgb(241, 241, 241);
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-bottom span {
+    color: #666;
+    font-size: 0.9em;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-section {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 0;
+        margin-top: 0;
+    }
+
+    .footer-bottom span {
+        font-size: 0.85em;
+    }
+}
+
+
+/* Estilos para la sección de eventos */
+.eventos-section {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.eventos-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 50px;
+    box-sizing: border-box;
+}
+
+.evento-card {
+    background: rgb(241, 241, 241);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow:  6px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.evento-card:hover {
+    transform: translateY(-5px);
+}
+
+.evento-card img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.evento-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.evento-card h3 {
+    margin: 15px 0 10px;
+    color: #333;
+}
+
+.evento-card .fecha {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.evento-card .descripcion {
+    color: #555;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+br {
+    content: "";
+    display: block;
+    margin-bottom: 50px; /* Ajusta el valor según tus necesidades */
+}
+.btn-evento {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #45a049;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-evento:hover {
+    background-color: #367c39;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .evento-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .evento-card img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .evento-info {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* About Section */
+.about-section {
+    width: 100%;
+    position: relative;
+    padding: 30px 0;
+    overflow: hidden;
+    height: 550px;
+    max-width: 1900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Carousel */
+#carouselAbout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Asegura que el carousel ocupe todo el alto del contenedor */
+    z-index: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#carouselAbout .carousel-item {
+    height: 100%;
+}
+
+#carouselAbout .carousel-item img {
+    width: 100%;
+    height: 100%;
+    margin-top: 2vh;
+    object-fit: cover;
+    border-radius: 0; /* Elimina bordes redondeados si los hay */
+    padding: 0; /* Elimina cualquier padding */
+}
+
+/* Estilos para los indicadores del carousel */
+#carouselAbout .carousel-indicators {
+    bottom: 20px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre los círculos */
+}
+
+#carouselAbout .carousel-indicators button {
+    width: 8px; /* Tamaño del círculo */
+    height: 8px;
+    border-radius: 50%; /* Convierte los indicadores en círculos */
+    background-color: rgba(255, 255, 255, 0.5); /* Color semitransparente */
+    border: 2px solid white; /* Borde blanco */
+    transition: background-color 0.3s ease; /* Transición para cambiar de color */
+    margin: 0 5px;
+}
+
+#carouselAbout .carousel-indicators button.active {
+    background-color: white; /* Color del indicador activo */
+    transform: scale(1.2); /* Agranda el círculo del indicador activo */
+}
+
+/* Centered content on slider */
+.about-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.about-content h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.about-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    color: #fff;
+}
+
+.about-text p,
+.about-text ul {
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.about-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-text ul li {
+    margin-bottom: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-section {
+        height: 450px;
+    }
+
+    .about-content h2 {
+        font-size: 2em;
+    }
+
+    .about-text {
+        padding: 20px;
+    }
+
+    .about-text p {
+        font-size: 0.95em;
+    }
+}
+
+.scroll-arrow {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    animation: bounce 2s infinite;
+    position: relative;
+    left: 50%;
+    display: block;
+    padding-bottom: 50px; 
+}
+
+.scroll-arrow i {
+    color: #000;
+    font-size: 2em;
+    display: block;
+}
+
+.scroll-arrow:hover i {
+    color: #45a049;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-main {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.about-title {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.about-mission, .about-vision {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.about-subtitle {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.about-text {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.about-team {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.btn-light {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.btn-light:hover {
+    background-color: #e2e6ea;
+    transform: scale(1.05);
+}
+
+.bi-house-door-fill {
+    font-size: 1.5rem;
+    color: #0d6efd;
+}
+
+
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .navbar-links{
+        margin-top: 10px;
+        font-size: 1.3em;
+    }   
+    .about-section {
+        height: auto;        /* Cambiado de height fijo a auto */
+        min-height: 350px;   /* Altura mínima para asegurar visibilidad */
+        margin: 0;
+        width: 100%;
+        padding: 0 15px;  /* Aumentado el padding para dar más espacio */
+        border-radius: 0;
+    }
+
+    .about-content {
+        padding: 20px 10px;
+        width: 100%;         /* Asegurar que el contenido no desborde */
+    }
+
+    .about-text {
+        padding: 15px;
+        margin: 0 10px;      /* Añadido margen lateral */
+    }
+
+    .about-content h2 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    .about-text p {
+        font-size: 0.9em;
+        line-height: 1.4;    /* Mejorar legibilidad */
+    }
+
+    .about-text ul {
+        margin: 10px 0;
+    }
+
+    .about-text ul li {
+        font-size: 0.9em;
+        margin-bottom: 5px;
+    }
+
+    #carouselAbout {
+        height: 100%;        /* Asegurar que el carousel ocupe todo el alto */
+    }
+
+    #carouselAbout .carousel-item img {
+        height: 100%;
+        object-fit: cover;
+    }
+    /* Estilos del footer responsive */
+    .footer-content {
+        flex-direction: column;
+        padding: 0 15px;
+    }
+
+
+    .footer-section h5 {
+        padding: 15px 0;
+        margin: 0;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .footer-section h5::after {
+        content: '\F282';
+        font-family: "bootstrap-icons";
+        transition: transform 0.3s ease;
+        position: absolute;
+        right: 10px;
+    }
+
+    .footer-section.active h5::after {
+        transform: rotate(180deg);
+    }
+
+    .footer-section ul {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    .footer-section.active ul {
+        max-height: 500px;
+        padding: 10px 0;
+    }
+
+    /* Mantener los iconos sociales siempre visibles */
+    .footer-section:last-child {
+        border-bottom: none;
+    }
+
+    .footer-section .social-icons {
+        display: flex !important;
+        justify-content: center;
+        padding: 15px 0;
+    }
+    .footer {
+        padding: 10px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        padding: 0 15px;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #ddd;
+    }
+
+   /* Asegurar que el copyright sea visible en móvil */
+   .footer-bottom {
+    display: block;
+    position: relative;
+    padding: 12px 0;
+    margin-top: 0;
+    z-index: 1;
+}
+
+.footer-bottom span {
+    font-size: 0.85em;
+    display: block;
+}
+}
+
+/* Estilos para los iconos de redes sociales */
+.social-icons a {
+    margin: 0 10px;
+    font-size: 1.5em;
+    color: #666;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Animaciones específicas para cada red social */
+.social-icons a .bi-instagram:hover {
+    color: #E4405F;
+    transform: scale(1.2) rotate(5deg);
+}
+
+.social-icons a .bi-facebook:hover {
+    color: #1877F2;
+    transform: scale(1.2) rotate(-5deg);
+}
+
+.social-icons a .bi-twitter:hover {
+    color: #1DA1F2;
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Efecto de rebote al hacer hover */
+.social-icons a:hover {
+    animation: bounce 0.4s ease;
+}
+
+/* Definición de la animación de rebote */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 768px) {
+    .social-icons a {
+        font-size: 1.3em; /* Ligeramente más pequeño en móviles */
+        margin: 0 15px;   /* Más espacio entre iconos en móviles */
+    }
+}
+
+/* Estilos para los enlaces del footer */
+.footer-section ul li a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+    padding: 3px 0;
+}
+
+/* Efecto de línea debajo del texto */
+.footer-section ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #367c39;
+    transition: width 0.3s ease;
+}
+
+/* Al hacer hover, la línea se expande */
+.footer-section ul li a:hover::after {
+    width: 100%;
+}
+
+/* Efecto de desplazamiento al hover */
+.footer-section ul li a:hover {
+    color: #333;
+    transform: translateX(5px);
+}
+
+/* Animación para los títulos de las secciones */
+.footer-section h5 {
+    transition: color 0.3s ease;
+}
+
+.footer-section h5:hover {
+    color: #333;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .footer-section ul li a {
+        padding: 5px 0;
+        display: block; /* Mejor área de toque en móviles */
+    }
+
+    .footer-section ul li a:hover {
+        transform: translateX(10px); /* Mayor desplazamiento en móviles */
+    }
+
+    /* Efecto de pulso para los títulos en móvil */
+    .footer-section h5:active {
+        animation: pulse 0.3s ease;
+    }
+}
+
+/* Animación de pulso para móviles */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.98);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Estilos base para los iconos */
+.navbar-links i {
+    color: #000; /* Color negro por defecto */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+/* Estilos base para la navegación */
+nav {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Estilos base para los enlaces e iconos */
+.navbar-links a {
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+/* Estilos hover para los enlaces e iconos */
+.navbar-links a:hover {
+    color: #fff;
+}
+
+/* Estilos específicos para el icono home */
+.bi-house-door-fill,
+.bi-search,
+.bi-person-fill,
+.bi-box-arrow-right,
+.bi-eye-slash,
+.bi-geo-alt {
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+/* Hover para iconos específicos */
+a:hover .bi-house-door-fill,
+a:hover .bi-search,
+a:hover .bi-person-fill,
+a:hover .bi-box-arrow-right,
+a:hover .bi-eye-slash,
+a:hover .bi-geo-alt {
+    color: #fff;
+}
+
+/* Estilo activo para la página actual */
+.navbar-links .active i {
+    color: #fff;
+}
+
+/* Asegurar que los iconos visitados vuelvan a su color original */
+.navbar-links a:visited i {
+    color: #000;
+}
+
+/* Hover después de visitado */
+.navbar-links a:visited:hover i {
+    color: #fff;
+}
+
+/* Estilos para el logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+/* Asegurar que los iconos tengan el mismo tamaño */
+.bi {
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+/* Css faq.php */
+#faq-css {
+    background-color: #abd5b2;
+    box-shadow:
+        0 -3em 3em rgba(0, 0, 0, 0.1), /* Sombra exterior superior */
+        0 0 0 2px rgb(255, 255, 255),  /* Borde blanco */
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    margin-top: 17vh;
+    display: flex; /* Usamos flex para apilar los elementos en columna */
+    padding: 10vh;
+    flex-direction: column;
+}
+
+#faq-gap-css{
+    display: flex;
+    gap: 3vh;
+    flex-direction: column;
+}
+
+.titol_faq{
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.3em;
+    padding: 10px;
+    background-color: #9ac3a1; /* Color suave para el fondo */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.faq-question:hover {
+    background-color: #c4dfc0; /* Color cuando se pasa el ratón */
+}
+
+.faq-answer {
+    display: none; /* Por defecto, las respuestas están ocultas */
+    margin-left: 20px;
+    font-size: 1.1em;
+}
+
+.faq-question .arrow {
+    margin-left: auto; /* Mueve la flecha hacia la derecha */
+    transition: transform 0.3s ease; /* Suaviza la animación de la flecha */
+}
+
+.faq-question.open .arrow {
+    transform: rotate(90deg); /* Rota la flecha al hacer clic */
+}
+
+.faq-question.open + .faq-answer {
+    display: block; /* Muestra la respuesta cuando se hace clic en la pregunta */
+}
+
+
+/* Estils per al mode clar (per defecte) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Fons blanc */
+    color: #000000; /* Text negre */
+    transition: background-color 0.3s, color 0.3s; /* Transició suau per al canvi de colors */
+}
+
+/* Estils per al mode fosc */
+body.modo-oscuro {
+    background-color: #121212; /* Fons fosc */
+    color: #e0e0e0; /* Text clar */
+}
+
+body.modo-oscuro a {
+    color: #bb86fc; /* Enllaços amb un color suau per al mode fosc */
+}
+
+
+
+body.modo-oscuro {
+    color: #e0e0e0; /* Enllaços clars a la navbar */
+}
+
+
+
+
