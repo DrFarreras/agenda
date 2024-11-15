@@ -5,7 +5,7 @@ function ctrlHome($request, $response, $container) {
 
     $response->set("title", "Home - agendafigueres");
     $response->set("heading", "Home");
-    $response->setTemplate("main.html");
+    $response->setTemplate("main.php");
 
     return $response;
 }
